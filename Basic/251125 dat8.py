@@ -6,17 +6,21 @@ citizen = [
     [1,5,3]
 ]
 
-arr = [[0,0,0] * 2]
-dat = [0] * 20
+dat = [0] * 8
 
-for i in ground:
-    for j in i:
-        dat[j] += 1
+# 1. DAT 배열 생성하기
+# 총 3번 세로 순회
+for i in range(len(ground)):
+    # 총 4번 가로 순회
+    for j in range(len(ground[0])):
+        # 해당 칸의 dat 배열 +1
+        current = ground[i][j]
+        dat[current] += 1
 
+# 2. citizen과 대조하여 출력하기
 for k in range(len(citizen)):
-    for l in range(len(citizen[0])):
-        var = citizen[k][l]
-        arr[k][l] = dat[var]
-
-for i in range(2):
-    print(arr[i])
+    for f in range(len(citizen[0])):
+        current_citizen = citizen[k][f]
+        print(dat[current_citizen], end=" ")
+    print()
+    

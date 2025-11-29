@@ -6,4 +6,8 @@ for t in range(1,T+1):
     N,M = map(int, input())
     pizzas = list(map(int, input().split()))
 
-    for
+    for i in range(100):
+        current = 0
+        if current == 
+
+

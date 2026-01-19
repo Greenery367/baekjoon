@@ -10,7 +10,6 @@ x,y = 0, 0
 
 q = deque()
 q.append((x,y))
-maze[y][x] += 1
 
 while q:
     x,y = q.popleft()
